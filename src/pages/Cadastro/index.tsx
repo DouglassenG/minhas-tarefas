@@ -1,4 +1,4 @@
-import Formulario from '../../components/Formulario'
+import Formulario from '../../containers/Formulario'
 import BarraLateral from '../../containers/BarraLateral'
 
 const Cadastro = () => (

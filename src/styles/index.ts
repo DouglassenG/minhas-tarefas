@@ -13,6 +13,11 @@ const EstiloGlobal = createGlobalStyle`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 224px auto;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    display: block;
+  }
 `
 export const MainContainer = styled.main`
   padding: 0 40px;
@@ -43,7 +48,7 @@ export const Botao = styled.button`
   padding: 8px 12px;
   border: none;
   cursor: pointer;
-  background-color: #2f3640;
+  background-color: ${variaveis.azulEscuro}
   border-radius: 8px;
   margin-right: 8px;
 `
