@@ -9,6 +9,7 @@ import { alterarTermo } from '../../store/reducers/filtro'
 
 import * as enums from '../../utils/enums/Tarefa'
 import { Botao, Campo } from '../../styles'
+import TituloPrincipal from '../../components/Titulo'
 
 type Props = {
   mostrarFiltros: boolean
@@ -24,6 +25,7 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
       <div>
         {mostrarFiltros ? (
           <>
+            <TituloPrincipal />
             <Campo
               type="text"
               placeholder="Buscar"
