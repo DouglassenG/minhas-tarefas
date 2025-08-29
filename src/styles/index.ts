@@ -13,6 +13,10 @@ const EstiloGlobal = createGlobalStyle`
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 224px auto;
+  background-image: url(https://cdn.pixabay.com/photo/2016/12/18/02/38/paper-1914903_1280.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media (max-width: 768px) {
     max-width: 100%;

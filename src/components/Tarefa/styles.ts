@@ -23,8 +23,8 @@ function retornaCorDeFundo(props: TagProps): string {
 }
 
 export const Card = styled.div`
-  background: linear-gradient(to right, #def1deff, #c5e9edff);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(to right, #dfffdfff, #bcf8ffff);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
   padding: 16px;
   margin-bottom: 32px;
   border-radius: 16px;
