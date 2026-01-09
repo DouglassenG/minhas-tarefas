@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# ✅ Minhas Tarefas (Task Manager)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Status](https://img.shields.io/badge/Status-Concluído-green)
+![Vue.js](https://img.shields.io/badge/Vue.js-3-4FC08D)
+![Vuex](https://img.shields.io/badge/Vuex-State_Management-blue)
+![Bootstrap](https://img.shields.io/badge/Style-Bootstrap-563D7C)
 
-## Available Scripts 
+## 📋 Sobre o Projeto
 
-In the project directory, you can run:
+O **Minhas Tarefas** é uma aplicação Single Page Application (SPA) construída com o framework **Vue.js**. O objetivo técnico deste projeto foi explorar uma abordagem diferente do React, utilizando a sintaxe de templates e a reatividade otimizada do Vue.
 
-### `npm start`
+A aplicação resolve o problema de desorganização pessoal, permitindo que o usuário tenha uma visão clara de suas pendências, com indicadores visuais de prioridade e status.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🛠 Tecnologias e Ferramentas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A stack foi escolhida pela sua curva de aprendizado ágil e performance:
 
-### `npm test`
+* **[Vue.js](https://vuejs.org/):** Framework progressivo para construção da interface. Utilizado com **Options API** (ou Composition API) para estruturação lógica.
+* **[Vuex](https://vuex.vuejs.org/):** Biblioteca de gerenciamento de estado (padrão Flux) para centralizar os dados das tarefas, permitindo que diferentes componentes (barra lateral, lista, formulário) acessem a mesma fonte de verdade.
+* **[TypeScript](https://www.typescriptlang.org/):** Para tipagem estática, garantindo que os objetos de "Tarefa" tenham a estrutura correta (id, título, descrição, status).
+* **[Bootstrap](https://getbootstrap.com/):** Framework CSS para estilização rápida, responsividade e componentes de UI consistentes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚙️ Funcionalidades Principais
 
-### `npm run build`
+1.  **CRUD de Tarefas:** Criação, Edição e Remoção de itens.
+2.  **Gerenciamento de Estado (Vuex):**
+    * As tarefas não são perdidas ao navegar entre filtros.
+    * Ações centralizadas (`actions` e `mutations`) para modificar a lista.
+3.  **Sistema de Filtros:**
+    * Visualizar todas as tarefas.
+    * Filtrar apenas pendentes.
+    * Filtrar apenas concluídas.
+4.  **Categorização:** Classificação de tarefas por prioridade ou tipo (ex: Importante, Urgente, Normal).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Estrutura do Código (Padrão Vue)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O projeto segue a estrutura clássica de *Single File Components* (.vue):
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```text
+src/
+├── components/      # Blocos de UI (TaskItem, FilterBar)
+├── views/           # Páginas da aplicação (Home, Cadastro)
+├── store/           # Gerenciamento de estado (Vuex Store)
+│   └── index.ts     # Definição de State, Mutations e Actions
+├── models/          # Interfaces TypeScript (ITarefa, IEnum)
+├── router/          # Configuração de rotas (Vue Router)
+└── App.vue          # Componente Raiz
